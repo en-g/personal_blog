@@ -1,0 +1,34 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.item-show {
+  -webkit-transform: scale(1, 11);
+  transform: scale(1, 1);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.item-not-show {
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.el-menu--horizontal > .el-menu-item.is-active {
+  border-bottom: none !important;
+}
+.el-popover {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+  border: none !important;
+}
+.el-popper .popper__arrow,
+.el-popper .popper__arrow::after {
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+/*# sourceMappingURL=base.css.map */
