@@ -3,7 +3,7 @@
     <div class="main-background-image">
       <img
         class="image"
-        src="http://localhost:8008/backgroundImage/random"
+        src="http://81.71.162.78:8008/backgroundImage/random"
         alt=""
       />
     </div>

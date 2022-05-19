@@ -1,6 +1,6 @@
 <template>
   <div class="footer-container">
-    <div class="footer-content">Copyright © 2022 Chen</div>
+    <div class="footer-content">Copyright © 2022 ChenZR</div>
     <div class="footer-navigation">
       <JumpLink />
     </div>

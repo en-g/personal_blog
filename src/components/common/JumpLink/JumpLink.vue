@@ -1,7 +1,11 @@
 <template>
   <div class="jump-link-container">
     <el-tooltip effect="dark" content="访问我的GitHub" placement="top">
-      <i class="iconfont icon-github" :class="{ color: isOrigin }"></i>
+      <i
+        class="iconfont icon-github"
+        :class="{ color: isOrigin }"
+        @click="listenNavigate"
+      ></i>
     </el-tooltip>
     <el-tooltip effect="dark" content="邮箱联系我" placement="top">
       <i class="iconfont icon-email" :class="{ color: isOrigin }"></i>
@@ -19,6 +23,11 @@ export default {
     isOrigin: {
       type: Boolean,
       default: false
+    }
+  },
+  methods: {
+    listenNavigate() {
+      window.open('https://github.com/en-g/personal_blog/tree/master', 'target')
     }
   }
 }
