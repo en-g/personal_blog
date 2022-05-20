@@ -1,3 +1,4 @@
+npm
 <template>
   <div class="index-container">
     <div class="index-main-content">
@@ -158,6 +159,8 @@ export default {
       uploadBlogVisible: false,
       uploadList: [],
       uploadBlogInfo: {
+        title: '',
+        description: '',
         tags: []
       },
       deleteBlogVisible: false
@@ -188,12 +191,25 @@ export default {
       formData.append('description', this.uploadBlogInfo.description)
       formData.append('tags', JSON.stringify(this.uploadBlogInfo.tags))
       formData.append('category', this.uploadBlogInfo.category)
-      const res = await uploadBlog(formData)
-      if (res) {
+      if (
+        !formData.get('title') ||
+        !formData.get('description') ||
+        !formData.get('blog') ||
+        !formData.get('cover')
+      ) {
         this.$message({
-          message: '上传博客成功~',
-          type: 'success'
+          message: '博客信息不完整~',
+          type: 'error'
         })
+        return
+      } else {
+        const res = await uploadBlog(formData)
+        if (res) {
+          this.$message({
+            message: '上传博客成功~',
+            type: 'success'
+          })
+        }
       }
       this.uploadBlogVisible = false
       this.uploadBlogInfo = { tags: [] }

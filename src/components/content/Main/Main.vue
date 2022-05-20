@@ -97,7 +97,7 @@ export default {
   }
   .main-content {
     width: 1125px;
-    margin: 60px auto 30px;
+    margin: 60px auto 180px;
     padding: 0;
   }
   .main-footer {
